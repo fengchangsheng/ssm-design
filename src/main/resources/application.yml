@@ -1,0 +1,35 @@
+
+spring:
+  datasource:
+    schema: classpath:design.sql
+        driver-class-name: org.h2.Driver
+        url: jdbc:h2:mem:design
+        username: sa
+        password:
+
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.16.137:3306/design
+#    username: root
+#    password: root
+    # 使用druid数据源
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    filters: stat
+#    maxActive: 20
+#    initialSize: 1
+#    maxWait: 60000
+#    minIdle: 1
+#    timeBetweenEvictionRunsMillis: 60000
+#    minEvictableIdleTimeMillis: 300000
+#    validationQuery: select 'x'
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+#    maxOpenPreparedStatements: 20
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+
+logging:
+  level:
+    root: WARN
